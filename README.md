@@ -6,42 +6,107 @@ This is a lightweight, offline billing software designed for Indian general stor
 
 ## 📦 Features
 
-- ✅ Single-window UI with sidebar navigation
-- ✅ Item management with dropdown for units
-- ✅ Unit-based billing (e.g., grams, liters, pieces)
-- ✅ Live bill preview with item-wise total
-- ✅ Payment methods: **Cash, UPI, Credit**
-- ✅ Credit customer tracking & viewing
-- ✅ CSV file-based data storage (no internet required)
+* ✅ Single-window UI with sidebar navigation
+* ✅ Item management with dropdown for units
+* ✅ Unit-based billing (e.g., grams, liters, pieces)
+* ✅ Live bill preview with item-wise total
+* ✅ Payment methods: **Cash, UPI, Credit**
+* ✅ Credit customer tracking & viewing
+* ✅ CSV file-based data storage (no internet required)
 
 ---
 
 ## 🖥️ Requirements
 
-- Python 3.8 or higher
-- Tkinter (comes pre-installed with Python)
-- OS: Windows, Linux, or macOS
+* Python 3.8 or higher
+* Tkinter (comes pre-installed with Python)
+* OS: Windows, Linux, or macOS
+
+> 💡 No need to install any external packages. All modules (`tkinter`, `csv`, `os`) are built into Python.
+
+On **Linux**, you may need to install Tkinter manually:
+
+```bash
+sudo apt-get install python3-tk
+```
 
 ---
 
 ## 📁 File Structure
 
+```
 billingSoftware/
-├── main_app.py # Main application file
+├── main_app.py                  # Main application file
 ├── data/
-│ ├── items.csv # Item data (auto-created)
-│ └── credit_customers.csv # Credit data (auto-created)
+│   ├── items.csv                # Item data (auto-created)
+│   └── credit_customers.csv     # Credit data (auto-created)
 └── README.md
-
+```
 
 ---
 
 ## 🚀 How to Run
 
-1. Install Python: https://www.python.org/downloads/
+1. Install Python: [https://www.python.org/downloads/](https://www.python.org/downloads/)
 2. Clone or download the repo.
 3. Open terminal or command prompt in the `billingSoftware/` folder.
 4. Run the app:
 
 ```bash
 python main_app.py
+```
+
+---
+
+## 🧰 How to Use
+
+### 🛒 Billing Tab
+
+* Enter the item code, quantity, and select unit.
+* Click **Add Item** to add to the bill.
+* Select payment method (Cash/UPI/Credit).
+* If Credit is selected, you will be prompted for customer name.
+* Bill total and item details are displayed live.
+
+### 📦 Manage Items Tab
+
+* Add or update items by entering code, name, price, and selecting unit.
+* All items are listed below with pricing info.
+
+### 📋 Credits Tab
+
+* View all credit customer entries.
+
+---
+
+## 💾 Data Files
+
+* All item and credit info is stored locally in `.csv` files under the `data/` folder.
+* You can open/edit these files using Excel or Notepad for manual changes if needed.
+
+---
+
+## 💡 Best Devices for Shop Owners (India)
+
+If you don’t have a PC, here are affordable options:
+
+### 💻 Option 1: Budget Laptop (₹20,000–₹30,000)
+
+* Example: [Lenovo IdeaPad 1](https://www.amazon.in/dp/B0B3G85YTR)
+
+### 💡 Option 2: Raspberry Pi 5 + Monitor (₹10,000–₹12,000)
+
+* Perfect for low-budget offline stores
+
+---
+
+## 📃 License
+
+This project is free to use and modify for educational and non-commercial use.
+
+---
+
+## 👨‍💻 Author
+
+**Yaswanth Kumar Gamidi**
+GitHub: @yash200508
