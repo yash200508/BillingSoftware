@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import ttk, messagebox, simpledialog
 import csv
 import os
 
@@ -124,7 +124,7 @@ class BillingApp:
     def finish_bill(self):
         method = self.payment_method.get()
         if method == "Credit":
-            customer = tk.simpledialog.askstring("Credit Customer", "Enter Customer Name:")
+            customer = simpledialog.askstring("Credit Customer", "Enter Customer Name:")
             if customer:
                 self.save_credit_customer(customer, self.total_amount.get())
         messagebox.showinfo("Bill", f"Payment received via {method}.\nTotal: ₹{self.total_amount.get():.2f}")
