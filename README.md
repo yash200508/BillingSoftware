@@ -12,7 +12,7 @@ This is a lightweight, offline billing software designed for Indian general stor
 * ✅ Live bill preview with item-wise total
 * ✅ Payment methods: **Cash, UPI, Credit**
 * ✅ Credit customer tracking & viewing
-* ✅ CSV file-based data storage (no internet required)
+* ✅ Uses SQLite for data persistence (no internet required)
 
 ---
 
@@ -22,7 +22,7 @@ This is a lightweight, offline billing software designed for Indian general stor
 * Tkinter (comes pre-installed with Python)
 * OS: Windows, Linux, or macOS
 
-> 💡 No need to install any external packages. All modules (`tkinter`, `csv`, `os`) are built into Python.
+> 💡 No need to install any external packages. All modules (`tkinter`, `sqlite3`, `os`) are built into Python.
 
 On **Linux**, you may need to install Tkinter manually:
 
@@ -37,9 +37,9 @@ sudo apt-get install python3-tk
 ```
 billingSoftware/
 ├── main_app.py                  # Main application file
+├── database.py                  # SQLite database functions
 ├── data/
-│   ├── items.csv                # Item data (auto-created)
-│   └── credit_customers.csv     # Credit data (auto-created)
+│   └── store.db                 # SQLite database file (auto-created)
 └── README.md
 ```
 
@@ -81,8 +81,20 @@ python main_app.py
 
 ## 💾 Data Files
 
-* All item and credit info is stored locally in `.csv` files under the `data/` folder.
-* You can open/edit these files using Excel or Notepad for manual changes if needed.
+* Data is now stored in a **SQLite database** (`data/store.db`).
+* You can use tools like **DB Browser for SQLite** to inspect or modify data.
+
+---
+
+## 📈 Pointers for Next Steps
+
+Here are some ideas to enhance or scale the software as you continue learning:
+
+* **Error handling & validation** – add validation for user input and handle unexpected input formats.
+* **Improving UI** – while Tkinter is easy, it’s basic. You could explore **PyQt**, **Kivy**, or use **Tkinter themes** for a modern look.
+* **Packaging** – create a standalone app using **PyInstaller** or **auto-py-to-exe** so shopkeepers don’t need Python installed.
+* **Testing** – add basic unit tests using the `unittest` module to prevent bugs when you add features.
+* **New features** – such as reports, user accounts, inventory alerts, or billing history.
 
 ---
 
